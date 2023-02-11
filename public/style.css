@@ -1,0 +1,163 @@
+body {
+  background-color: #000e15;
+  font-family: "DM Sans", sans-serif;
+  padding: 0;
+  margin: none;
+  overflow: hidden;
+}
+
+.i {
+  opacity: 1;
+}
+
+.o {
+  opacity: 0;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.page {
+  scroll-snap-align: start;
+  display: grid;
+  padding: 5vh 0 0 5vw;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: 10vh;
+  height: 100vh;
+  transition: 0.7s;
+}
+@media screen and (min-width: 768px) {
+  .page {
+    overflow: hidden;
+  }
+}
+
+#tspage {
+  grid-template-columns: auto;
+  grid-template-rows: 20% 80%;
+  gap: 0;
+  height: 100vh;
+}
+
+.heading h1 {
+  color: #66ccbb;
+  font-size: 9vh;
+  font-family: Figtree;
+  font-weight: 700;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.mainheading h1 {
+  color: #0073ad;
+  font-size: 12.5vh;
+  margin: 0;
+}
+.mainheading h3 {
+  color: #00e2ba;
+  font-weight: 300;
+  font-size: 5vh;
+  width: 25vw;
+  margin: 0;
+}
+
+.scrolltext {
+  color: #ddd;
+  font-family: Figtree;
+  font-weight: 500;
+}
+
+.github {
+  font-size: 4vh;
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+}
+.github :before {
+  content: "  ";
+  background-image: url("img/github.png");
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-size: 100% 100%;
+  position: relative;
+  top: 0.5vh;
+  margin-right: 1vw;
+}
+.github :link {
+  color: #eee;
+  text-decoration: none;
+}
+.github :active {
+  color: #0073ad;
+}
+.github :visited {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.tabs {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 20vw;
+}
+.tabs .tab {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1vh 1vw;
+  border: none;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-family: Figtree, sans-serif;
+  font-weight: 500;
+  font-size: 3vh;
+  height: 9vh;
+}
+.tabs .tab:hover {
+  background-color: rgba(100, 150, 200, 0.1);
+}
+.tabs .active {
+  background-color: rgba(100, 150, 200, 0.2);
+  cursor: default;
+}
+.tabs .active:hover {
+  background-color: rgba(100, 150, 200, 0.2);
+  color: inherit;
+}
+
+.tabspace {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  color: white;
+}
+
+.spaces .space {
+  overflow-y: scroll;
+  height: 70vh;
+  visibility: hidden;
+  display: none;
+  margin-right: 5vw;
+  transition: 0.8s;
+  padding: 0 1vw;
+  font-family: "EB Garamond", serif;
+  font-size: 1.75rem;
+  text-rendering: optimizeLegibility;
+}
+.spaces .space h1 {
+  margin: 0;
+  font-family: Figtree, sans-serif;
+}
+.spaces .active {
+  visibility: visible;
+  display: block;
+  transition: 0.8s;
+}/*# sourceMappingURL=style.css.map */
